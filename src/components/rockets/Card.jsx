@@ -5,12 +5,13 @@ import CardBody from './CardBody';
 
 export default function Card({ rocketId }) {
   const rocket = useSelector((state) => state.rockets.entities[rocketId]);
-  const { id, name, image, description } = rocket;
-  console.log(todo);
+  const {
+    id, name, image, description, active,
+  } = rocket;
   return (
     <div className="card d-flex">
-      <CardHeader />
-      <CardBody />
+      <CardHeader image={image} />
+      <CardBody id={id} name={name} description={description} active={active} />
     </div>
   );
 }
