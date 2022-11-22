@@ -165,7 +165,16 @@ header {
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+}
+
+.free {
+  background-color: dodgerblue;
+  color: var(--clr-neutral-100);
   border: none;
+}
+
+.reserved {
+  border: 1px solid var(--clr-secondary-400);
 }
 
 .loader {
@@ -173,6 +182,14 @@ header {
   justify-content: center;
   align-items: center;
   height: 80vh;
+}
+
+.badge {
+  background-color: rgb(72, 154, 235);
+  padding-inline: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
 }
 
 /* Utility classes */
