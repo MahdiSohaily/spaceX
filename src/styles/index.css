@@ -1,10 +1,10 @@
 :root {
-  --clr-primary-400: 263 55% 52%;
-  --clr-secondary-400: 217 19% 35%;
-  --clr-secondary-500: 219 29% 14%;
-  --clr-neutral-100: 0 0% 100%;
-  --clr-neutral-200: 210 46% 95%;
-  --clr-neutral-300: 0 0% 81%;
+  --clr-primary-400: hsl(263 55% 52%);
+  --clr-secondary-400: hsl(217 19% 35%);
+  --clr-secondary-500: hsl(219 29% 14%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(210 46% 95%);
+  --clr-neutral-300: hsl(0 0% 81%);
   --ff-primary: 'Barlow Semi Condensed', sans-serif;
   --fw-400: 500;
   --fw-700: 600;
@@ -122,6 +122,7 @@ header {
 .nav-link a.active {
   text-decoration: underline;
 }
+
 /* End of header section styles */
 
 /* Rocket section styles */
@@ -135,15 +136,17 @@ header {
   .card {
     flex-direction: row;
   }
+
   .card-header {
-    flex: 25%;
+    flex: 23%;
   }
 
   .card-body {
-    flex: 75%;
+    flex: 77%;
   }
+
   .card-image {
-    width: 300px;
+    width: 280px;
     height: 180px;
   }
 }
@@ -158,6 +161,13 @@ header {
   padding-block: 1rem;
 }
 
+.action-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  border: none;
+}
+
 /* Utility classes */
 .d-flex {
   display: flex;
@@ -170,27 +180,31 @@ header {
 }
 
 .bg-primary-400 {
-  background: hsl(var(--clr-primary-400));
+  background: var(--clr-primary-400);
 }
 
 .bg-secondary-400 {
-  background: hsl(var(--clr-secondary-400));
+  background: var(--clr-secondary-400);
 }
 
 .bg-secondary-500 {
-  background: hsl(var(--clr-secondary-500));
+  background: var(--clr-secondary-500);
 }
 
 .bg-neutral-100 {
-  background: hsl(var(--clr-neutral-100));
+  background: var(--clr-neutral-100);
+}
+
+.bg-dodgerblue {
+  background-color: dodgerblue;
 }
 
 .text-neutral-100 {
-  color: hsl(var(--clr-neutral-100));
+  color: var(--clr-neutral-100);
 }
 
 .text-secondary-400 {
-  color: hsl(var(--clr-secondary-400));
+  color: var(--clr-secondary-400);
 }
 
 .border-primary-400 {

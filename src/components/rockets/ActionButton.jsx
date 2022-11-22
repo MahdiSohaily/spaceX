@@ -1,5 +1,7 @@
-import React from 'react';
-
 export default function ActionButton() {
-  return <button type="button">Reserve Rocket</button>;
+  return (
+    <button className="action-button bg-dodgerblue text-neutral-100" type="button">
+      Reserve Rocket
+    </button>
+  );
 }
