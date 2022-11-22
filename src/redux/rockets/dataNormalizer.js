@@ -1,15 +1,20 @@
-/* eslint-disable object-curly-newline */
-/* eslint-disable camelcase */
 const normalizer = (data) => {
   const cleanData = {};
   data.forEach((element) => {
-    const { id, rocket_name, description, flickr_images } = element;
+    const {
+      id,
+      rocket_name: name,
+      description,
+      flickr_images: image,
+      active,
+    } = element;
 
     cleanData[id] = {
       id,
-      rocket_name,
+      name,
       description,
-      flickr_images: flickr_images[0],
+      image: image[0],
+      active,
     };
   });
 
