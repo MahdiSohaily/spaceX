@@ -167,6 +167,12 @@ header {
   border-radius: 0.25rem;
   border: none;
 }
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
 
 /* Utility classes */
 .d-flex {
