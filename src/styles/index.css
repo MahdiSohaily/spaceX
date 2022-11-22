@@ -167,6 +167,7 @@ header {
   border-radius: 0.25rem;
   border: none;
 }
+
 .loader {
   display: flex;
   justify-content: center;
