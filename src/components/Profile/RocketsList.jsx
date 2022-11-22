@@ -3,17 +3,11 @@ import { reservedRocket } from '../../redux/rockets/selectors';
 
 export default function RocketsList() {
   const reserved = useSelector(reservedRocket);
-  console.log(reserved);
+  const items = reserved.map((item) => <li key={item.id}>{item.name}</li>);
   return (
     <div className="rocket-list">
       <h1>My Rockets</h1>
-      <ul className="rockets-nav">
-        <li className="nav-item">Hi</li>
-        <li className="nav-item">Hi</li>
-        <li className="nav-item">Hi</li>
-        <li className="nav-item">Hi</li>
-        <li className="nav-item">Hi</li>
-      </ul>
+      <ul className="rockets-nav">{items}</ul>
     </div>
   );
 }
