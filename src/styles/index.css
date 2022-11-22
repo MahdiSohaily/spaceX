@@ -132,6 +132,23 @@ header {
   gap: 1rem;
 }
 
+.mission {
+  width: 200px;
+}
+
+.description {
+  width: 650px;
+}
+
+.status {
+  width: 150px;
+}
+
+.table {
+  border: 1px solid rgb(185, 188, 194);
+  border-radius: 4px;
+}
+
 @media screen and (min-width: 40rem) {
   .card {
     flex-direction: row;
@@ -255,3 +272,4 @@ header {
 .border-primary-400 {
   border: 2px solid #a775f1;
 }
+
