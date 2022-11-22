@@ -184,6 +184,14 @@ header {
   height: 80vh;
 }
 
+.badge {
+  background-color: rgb(72, 154, 235);
+  padding-inline: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+}
+
 /* Utility classes */
 .d-flex {
   display: flex;
