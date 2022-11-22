@@ -1,3 +1,4 @@
+/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { client } from '../../api/client';
 import normalizer from './dataNormalizer';
@@ -18,8 +19,8 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchRockets.fulfilled, (state) => {
-      initialState.entities = state;
+    builder.addCase(fetchRockets.fulfilled, (state, action) => {
+      state.entities = action.payload;
     });
   },
 });
