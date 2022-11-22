@@ -19,9 +19,16 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: (builder) => {
-    builder.addCase(fetchRockets.fulfilled, (state, action) => {
-      state.entities = action.payload;
-    });
+    builder
+      .addCase(fetchRockets.pending, (state) => {
+        state.status = 'loading';
+      })
+      .addCase(fetchRockets.fulfilled, (state, action) => {
+        state.entities = action.payload;
+      })
+      .addCase(fetchRockets.rejected, () => {
+        throw new Error('Something went wrong while fetching data from API');
+      });
   },
 });
 
