@@ -1,5 +1,11 @@
 import React from 'react';
+import CardHeader from './CardHeader';
 
 export default function Card() {
-  return <div>Card</div>;
+  return (
+    <div>
+      <CardHeader />
+      
+    </div>
+  );
 }
