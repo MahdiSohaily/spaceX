@@ -25,6 +25,7 @@ const rocketsSlice = createSlice({
       })
       .addCase(fetchRockets.fulfilled, (state, action) => {
         state.entities = action.payload;
+        state.status = 'ideal';
       })
       .addCase(fetchRockets.rejected, () => {
         throw new Error('Something went wrong while fetching data from API');
