@@ -196,10 +196,17 @@ header {
 .mission-list,
 .rocket-list {
   flex: 1;
+  padding: 1rem 1.5rem;
 }
 
 .rockets-nav {
+  margin-block: 1rem;
   border: 1px solid var(--clr-secondary-500);
+  border-radius: 0.5rem;
+}
+
+.nav-item {
+  padding: 1.5rem;
 }
 
 .nav-item:not(:last-child) {
