@@ -1,7 +1,9 @@
 import { useSelector } from 'react-redux';
+import { reservedRocket } from '../../redux/rockets/selectors';
 
 export default function RocketsList() {
-  const reserved = useSelector();
+  const reserved = useSelector(reservedRocket);
+  console.log(reserved);
   return (
     <div className="rocket-list">
       <h1>My Rockets</h1>
