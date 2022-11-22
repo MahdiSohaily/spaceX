@@ -165,7 +165,16 @@ header {
   cursor: pointer;
   padding: 0.5rem 1rem;
   border-radius: 0.25rem;
+}
+
+.free {
+  background-color: dodgerblue;
+  color: var(--clr-neutral-100);
   border: none;
+}
+
+.reserved {
+  border: 1px solid var(--clr-secondary-400);
 }
 
 .loader {
