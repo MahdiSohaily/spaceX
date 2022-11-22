@@ -91,7 +91,7 @@ select {
 
 /* Header section styles */
 header {
-  box-shadow: 0px 0px 4px 1px #262525;
+  box-shadow: 0 0 4px 1px #262525;
   margin-bottom: 2rem;
 }
 
@@ -118,6 +118,7 @@ header {
 .nav-link a {
   text-decoration: none;
 }
+
 .nav-link a.active {
   text-decoration: underline;
 }
@@ -136,9 +137,11 @@ header {
 .bg-primary-400 {
   background: hsl(var(--clr-primary-400));
 }
+
 .bg-secondary-400 {
   background: hsl(var(--clr-secondary-400));
 }
+
 .bg-secondary-500 {
   background: hsl(var(--clr-secondary-500));
 }
@@ -150,9 +153,11 @@ header {
 .text-neutral-100 {
   color: hsl(var(--clr-neutral-100));
 }
+
 .text-secondary-400 {
   color: hsl(var(--clr-secondary-400));
 }
+
 .border-primary-400 {
   border: 2px solid #a775f1;
 }
