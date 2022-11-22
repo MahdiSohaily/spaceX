@@ -198,6 +198,14 @@ header {
   flex: 1;
 }
 
+.rockets-nav {
+  border: 1px solid var(--clr-secondary-500);
+}
+
+.nav-item:not(:last-child) {
+  border-bottom: 1px solid var(--clr-secondary-500);
+}
+
 /* Utility classes */
 .d-flex {
   display: flex;
