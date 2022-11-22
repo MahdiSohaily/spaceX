@@ -1,5 +1,7 @@
-import React from 'react';
-
 export default function CardHeader() {
-  return <div>CardHeader</div>;
+  return (
+    <div>
+      <img src="https://imgur.com/DaCfMsj.jpg" alt="rocket" />
+    </div>
+  );
 }
