@@ -1,7 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import 
+import Navbar from './pages/Navbar';
+import Rockets from './pages/Rockets';
+import Missions from './pages/Missions';
+import Profile from './pages/Profile';
+import NotFound from './pages/NotFound';
 import './styles/index.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -10,9 +14,9 @@ root.render(
     <Router>
       <Routes>
         <Route path="/" element={<Navbar />}>
-          <Route index element={<Home />} />
-          <Route path="calculator" element={<App />} />
-          <Route path="quote" element={<Quote />} />
+          <Route index element={<Rockets />} />
+          <Route path="missions" element={<Missions />} />
+          <Route path="profile" element={<Profile />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>

@@ -5,16 +5,17 @@ export default function Navbar() {
   return (
     <>
       <nav className="navBar p-8">
-        <p className="logo">Math Magicians</p>
+        <img src="./images/planet.ong" alt="website logo" />
+        <p className="logo">SpaceX</p>
         <ul className="menuNav">
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Rockets</NavLink>
           </li>
           <li>
-            <NavLink to="/calculator">Calculator</NavLink>
+            <NavLink to="/missions">Missions</NavLink>
           </li>
           <li>
-            <NavLink to="/quote">Quote</NavLink>
+            <NavLink to="/profile">My Profile</NavLink>
           </li>
         </ul>
       </nav>
