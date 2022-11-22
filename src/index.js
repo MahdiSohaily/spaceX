@@ -9,6 +9,9 @@ import Missions from './pages/Missions';
 import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import './styles/index.css';
+import { fetchRockets } from './redux/rockets/rocketSlice';
+
+store.dispatch(fetchRockets());
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
