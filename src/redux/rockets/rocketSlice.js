@@ -5,7 +5,6 @@ import normalizer from './dataNormalizer';
 export const fetchRockets = createAsyncThunk('getRockets', async () => {
   const result = await client.get('https://api.spacexdata.com/v3/rockets');
   const final = normalizer(result);
-  console.log(final);
   return final;
 });
 
@@ -20,7 +19,7 @@ const rocketsSlice = createSlice({
   reducers: {},
   extraReducers: (builder) => {
     builder.addCase(fetchRockets.fulfilled, (state) => {
-      console.log(state);
+      initialState.entities = state;
     });
   },
 });
