@@ -19,7 +19,7 @@ const rocketsSlice = createSlice({
   initialState,
   reducers: {
     bookRocket(state, action) {
-      state.entities[action.payload] = !state.entities[action.payload].active;
+      state.entities[action.payload].active = !state.entities[action.payload].active;
     },
   },
   extraReducers: (builder) => {
