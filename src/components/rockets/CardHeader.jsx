@@ -1,6 +1,6 @@
 export default function CardHeader() {
   return (
-    <div>
+    <div className="card-header">
       <img
         width={240}
         height={180}
