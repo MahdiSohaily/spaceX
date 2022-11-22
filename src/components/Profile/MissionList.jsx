@@ -1,3 +1,3 @@
 export default function MissionList() {
-  return <div>MissionList</div>;
+  return <div className="mission-list">MissionList</div>;
 }

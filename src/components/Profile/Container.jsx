@@ -3,9 +3,9 @@ import RocketsList from './RocketsList';
 
 export default function Container() {
   return (
-    <div>
-      <RocketsList />
+    <div className="d-flex">
       <MissionList />
+      <RocketsList />
     </div>
   );
 }

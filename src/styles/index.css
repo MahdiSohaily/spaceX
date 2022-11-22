@@ -192,6 +192,12 @@ header {
   font-size: 14px;
 }
 
+/* Profile styles */
+.mission-list,
+.rocket-list {
+  flex: 1;
+}
+
 /* Utility classes */
 .d-flex {
   display: flex;
