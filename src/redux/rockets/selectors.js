@@ -1,2 +1,2 @@
-const rocketsData = (state) => state.rockets.entities;
+const rocketsData = (state) => Object.keys(state.rockets.entities);
 export default rocketsData;
