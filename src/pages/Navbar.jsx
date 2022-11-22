@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <>
       <nav className="navBar p-8">
-        <img src="./images/planet.ong" alt="website logo" />
+        <img src="/images/planet.png" alt="website logo" />
         <p className="logo">SpaceX</p>
         <ul className="menuNav">
           <li>
