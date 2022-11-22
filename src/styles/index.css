@@ -122,37 +122,3 @@ header {
   text-decoration: underline;
 }
 
-/* Utility classes */
-.d-flex {
-  display: flex;
-}
-
-.wrapper {
-  max-width: 90%;
-  margin-inline: auto;
-  padding-inline: 1rem;
-}
-
-.bg-primary-400 {
-  background: hsl(var(--clr-primary-400));
-}
-.bg-secondary-400 {
-  background: hsl(var(--clr-secondary-400));
-}
-.bg-secondary-500 {
-  background: hsl(var(--clr-secondary-500));
-}
-
-.bg-neutral-100 {
-  background: hsl(var(--clr-neutral-100));
-}
-
-.text-neutral-100 {
-  color: hsl(var(--clr-neutral-100));
-}
-.text-secondary-400 {
-  color: hsl(var(--clr-secondary-400));
-}
-.border-primary-400 {
-  border: 2px solid #a775f1;
-}
