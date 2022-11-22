@@ -122,6 +122,18 @@ header {
 .nav-link a.active {
   text-decoration: underline;
 }
+/* End of header section styles */
+
+/* Rocket section styles */
+.card {
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.card-image {
+  width: 280px;
+  height: 180px;
+}
 
 /* Utility classes */
 .d-flex {
@@ -129,7 +141,7 @@ header {
 }
 
 .wrapper {
-  max-width: 90%;
+  max-width: 85%;
   margin-inline: auto;
   padding-inline: 1rem;
 }

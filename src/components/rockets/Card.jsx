@@ -3,7 +3,7 @@ import CardBody from './CardBody';
 
 export default function Card() {
   return (
-    <div>
+    <div className="card d-flex">
       <CardHeader />
       <CardBody />
     </div>
