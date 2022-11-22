@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default function Rockets() {
-  return <div>Rockets</div>;
+  return <div className="wrapper">Rockets</div>;
 }
