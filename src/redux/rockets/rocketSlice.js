@@ -37,4 +37,6 @@ const rocketsSlice = createSlice({
   },
 });
 
+export const { bookRocket } = rocketsSlice.actions;
+
 export default rocketsSlice.reducer;
