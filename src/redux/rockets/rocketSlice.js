@@ -1,9 +1,11 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { client } from '../../api/client';
+import normalizer from './dataNormalizer';
 
 export const fetchRockets = createAsyncThunk('getRockets', async () => {
   const result = await client.get('https://api.spacexdata.com/v3/rockets');
-  console.log(result);
+  const final = normalizer(result);
+  return final;
 });
 
 const initialState = {
