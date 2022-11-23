@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect } from 'react';
 import { shallowEqual, useDispatch, useSelector } from 'react-redux';
 import MissionItem from './MissionItem';
 import { fetchMissions, missionsID } from '../../redux/missions/missionsSlice';
@@ -15,12 +15,14 @@ const Missions = () => {
   return (
     <>
       <div className="table-container">
-        <table className="striped bordered hover" size="sm">
+        <table className="table table-striped bordered hover" size="sm">
           <thead>
             <tr>
               <th className="mission">Mission</th>
               <th className="description">Description</th>
-              <th className="status">Status</th>
+              <th colSpan={2} className="status">
+                Status
+              </th>
             </tr>
           </thead>
           <tbody>{missionItems}</tbody>

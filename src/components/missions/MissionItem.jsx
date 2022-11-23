@@ -1,5 +1,4 @@
 /* eslint-disable no-unused-vars */
-import 'bootstrap/dist/css/bootstrap.min.css';
 import PropTypes from 'prop-types';
 import { useDispatch, useSelector } from 'react-redux';
 import { reservedMissions } from '../../redux/missions/missionsSlice';
@@ -14,10 +13,15 @@ const Mission = ({ missionId }) => {
         <th>{mission.name}</th>
         <td>{mission.description}</td>
         <td>
-          <p>NOT A MEMBER</p>
+          <p className="badge bg-info">NOT A MEMBER</p>
         </td>
         <td>
-          <button onClick={reserved} type="button" id={mission.id}>
+          <button
+            className="btn btn-outline-danger"
+            onClick={reserved}
+            type="button"
+            id={mission.id}
+          >
             JOIN MISSION
           </button>
         </td>
