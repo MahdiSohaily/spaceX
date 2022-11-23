@@ -36,11 +36,14 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     reservedMissions(state, action) {
+      state.entities[action.payload].reserved = !state.entities[action.payload].reserved;
+    },
+    leaveMissions(state, action) {
       const newState = state.map((index) => {
         if (action.payload !== index.id) {
           return { ...index };
         }
-        return { ...index, reserved: true };
+        return { ...index, reserved: false };
       });
       return newState;
     },
@@ -59,7 +62,7 @@ const missionSlice = createSlice({
       });
   },
 });
-export const { reservedMissions } = missionSlice.actions;
+export const { reservedMissions, leaveMissions } = missionSlice.actions;
 export default missionSlice.reducer;
 
 // Selectors
