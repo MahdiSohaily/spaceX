@@ -36,13 +36,7 @@ const missionSlice = createSlice({
   initialState,
   reducers: {
     reservedMissions(state, action) {
-      const newState = state.map((index) => {
-        if (action.payload !== index.id) {
-          return { ...index };
-        }
-        return { ...index, reserved: true };
-      });
-      return newState;
+      state.entities[action.payload].reserved = !state.entities[action.payload].reserved;
     },
     leaveMissions(state, action) {
       const newState = state.map((index) => {
