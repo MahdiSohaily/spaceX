@@ -1,16 +1,19 @@
-import React from 'react';
+import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
-import renderer from 'react-test-renderer';
+import { BrowserRouter as Router } from 'react-router-dom';
 import Rocket from '../pages/Rockets';
-import configureStore from '../redux/store';
+import store from '../redux/store';
 
-it('renders correctly', () => {
-  const rocket = renderer
-    .create(
-      <Provider store={configureStore}>
-        <Rocket />
+describe('Rocket', () => {
+  test('renders Rocket component', () => {
+    render(
+      <Provider store={store}>
+        <Router>
+          <Rocket />
+        </Router>
       </Provider>,
-    )
-    .toJSON();
-  expect(rocket).toMatchSnapshot();
+    );
+    const rocket = screen.getByTestId('rocket');
+    expect(rocket).toEqual(expect.anything());
+  });
 });
