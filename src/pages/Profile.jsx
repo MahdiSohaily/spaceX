@@ -1,10 +1,10 @@
 import React from 'react';
-import Container from '../components/Profile/Container';
+import ProfileContainer from '../components/Profile/ProfileContainer';
 
 export default function Profile() {
   return (
     <div className="wrapper">
-      <Container />
+      <ProfileContainer />
     </div>
   );
 }

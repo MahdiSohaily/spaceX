@@ -3,12 +3,12 @@
 /* eslint-disable function-paren-newline */
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { client } from '../../api/client';
 
 const FETCH_MISSIONS = 'missions/fetchMissions';
 const url = 'https://api.spacexdata.com/v3/missions/';
 const fetchMissions = createAsyncThunk(FETCH_MISSIONS, () =>
-  axios.get(url).then((response) => {
+  client.get(url).then((response) => {
     const missions = response.data;
     const cleanData = {};
     missions.forEach((element) => {
