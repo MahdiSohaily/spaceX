@@ -1,10 +1,10 @@
 import React from 'react';
-import Container from '../components/rockets/Container';
+import RocketsContainer from '../components/rockets/RocketsContainer';
 
 export default function Rockets() {
   return (
     <div className="wrapper">
-      <Container />
+      <RocketsContainer />
     </div>
   );
 }
