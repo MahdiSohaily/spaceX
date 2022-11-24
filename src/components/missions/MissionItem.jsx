@@ -10,9 +10,6 @@ const Mission = ({ missionId }) => {
   const mission = useSelector((state) => state.missions.entities[missionId]);
   const dispatch = useDispatch();
   const reserved = (id) => dispatch(reservedMissions(id));
-  const leaving = () => {
-    dispatch(leaveMissions(id));
-  };
 
   const text = mission.reserved ? 'LEAVE A MISSION' : 'JOIN MISSION';
   const type = mission.reserved

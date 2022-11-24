@@ -10,8 +10,10 @@ const Missions = () => {
   ));
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(fetchMissions());
-  }, [dispatch]);
+    if (data.length === 0) {
+      dispatch(fetchMissions());
+    }
+  }, [data.length, dispatch]);
   return (
     <>
       <div className="table-container">

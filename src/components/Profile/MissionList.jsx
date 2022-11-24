@@ -1,5 +1,5 @@
-import { useSelector } from "react-redux";
-import { reservedMissions } from "../../redux/missions/selectors";
+import { useSelector } from 'react-redux';
+import { reservedMissions } from '../../redux/missions/selectors';
 
 export default function MissionsList() {
   const active = useSelector(reservedMissions);

@@ -1,28 +1,23 @@
-/* eslint-disable implicit-arrow-linebreak */
-/* eslint-disable comma-dangle */
-/* eslint-disable function-paren-newline */
 /* eslint-disable no-param-reassign */
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
 const FETCH_MISSIONS = 'missions/fetchMissions';
 const url = 'https://api.spacexdata.com/v3/missions/';
-const fetchMissions = createAsyncThunk(FETCH_MISSIONS, () =>
-  axios.get(url).then((response) => {
-    const missions = response.data;
-    const cleanData = {};
-    missions.forEach((element) => {
-      const { mission_id: id, mission_name: name, description } = element;
-      cleanData[id] = {
-        id,
-        name,
-        description,
-        reserved: false,
-      };
-    });
-    return cleanData;
-  })
-);
+const fetchMissions = createAsyncThunk(FETCH_MISSIONS, () => axios.get(url).then((response) => {
+  const missions = response.data;
+  const cleanData = {};
+  missions.forEach((element) => {
+    const { mission_id: id, mission_name: name, description } = element;
+    cleanData[id] = {
+      id,
+      name,
+      description,
+      reserved: false,
+    };
+  });
+  return cleanData;
+}));
 
 export { fetchMissions };
 
