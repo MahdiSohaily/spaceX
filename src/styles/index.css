@@ -1,0 +1,274 @@
+:root {
+  --clr-primary-400: hsl(263 55% 52%);
+  --clr-secondary-400: hsl(217 19% 35%);
+  --clr-secondary-500: hsl(219 29% 14%);
+  --clr-neutral-100: hsl(0 0% 100%);
+  --clr-neutral-200: hsl(210 46% 95%);
+  --clr-neutral-300: hsl(0 0% 81%);
+  --ff-primary: 'Barlow Semi Condensed', sans-serif;
+  --fw-400: 500;
+  --fw-700: 600;
+  --fs-300: 0.6875rem;
+  --fs-400: 0.8125rem;
+  --fs-500: 1.25rem;
+  --fs-900: 2.25rem;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: var(--fw-700);
+  font-size: var(--fs-900);
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+* {
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Header section styles */
+header {
+  box-shadow: 0 0 4px 1px #262525;
+  margin-bottom: 2rem;
+}
+
+.navBar {
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1rem;
+}
+
+.navBrand {
+  align-items: center;
+  gap: 1rem;
+}
+
+.logo {
+  width: 60px;
+  height: auto;
+}
+
+.menuNav {
+  gap: 1.5rem;
+}
+
+.nav-link a {
+  text-decoration: none;
+}
+
+.nav-link a.active {
+  text-decoration: underline;
+}
+
+/* End of header section styles */
+
+/* Rocket section styles */
+.card {
+  flex-direction: column;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.mission {
+  width: 200px;
+}
+
+.description {
+  width: 650px;
+}
+
+.status {
+  width: 150px;
+}
+
+.table {
+  border: 1px solid rgb(185, 188, 194);
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 40rem) {
+  .card {
+    flex-direction: row;
+  }
+
+  .card-header {
+    flex: 23%;
+  }
+
+  .card-body {
+    flex: 77%;
+  }
+
+  .card-image {
+    width: 280px;
+    height: 180px;
+  }
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+}
+
+.rocket-description {
+  font-size: 1rem;
+  padding-block: 1rem;
+}
+
+.action-button {
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+}
+
+.free {
+  background-color: dodgerblue;
+  color: var(--clr-neutral-100);
+  border: none;
+}
+
+.reserved {
+  border: 1px solid var(--clr-secondary-400);
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+
+.badge {
+  background-color: rgb(72, 154, 235);
+  padding-inline: 0.5rem;
+  margin-right: 0.5rem;
+  border-radius: 0.5rem;
+  font-size: 14px;
+}
+
+/* Profile styles */
+.mission-list,
+.rocket-list {
+  flex: 1;
+  padding: 1rem 1.5rem;
+}
+
+.rockets-nav {
+  margin-block: 1rem;
+  border: 1px solid var(--clr-secondary-500);
+  border-radius: 0.5rem;
+}
+
+.nav-item {
+  padding: 1.5rem;
+}
+
+.nav-item:not(:last-child) {
+  border-bottom: 1px solid var(--clr-secondary-500);
+}
+
+/* Utility classes */
+.d-flex {
+  display: flex;
+}
+
+.wrapper {
+  max-width: 85%;
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+
+.bg-primary-400 {
+  background: var(--clr-primary-400);
+}
+
+.bg-secondary-400 {
+  background: var(--clr-secondary-400);
+}
+
+.bg-secondary-500 {
+  background: var(--clr-secondary-500);
+}
+
+.bg-neutral-100 {
+  background: var(--clr-neutral-100);
+}
+
+.bg-dodgerblue {
+  background-color: dodgerblue;
+}
+
+.text-neutral-100 {
+  color: var(--clr-neutral-100);
+}
+
+.text-secondary-400 {
+  color: var(--clr-secondary-400);
+}
+
+.border-primary-400 {
+  border: 2px solid #a775f1;
+}
